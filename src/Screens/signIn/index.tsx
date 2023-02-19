@@ -1,20 +1,15 @@
 import { View, 
         Text, 
         TextInput,
-        Image, 
-        StatusBar} from 'react-native'
+        Image } from 'react-native'
 import React from 'react'
 import { styles } from './styles'
 import illustrationImg from '../../assets/illustration.png'
 import ButtonIcon from '../../components/ButtonIcon'
+
 export function Index() {
   return (
     <View style={styles.container}>
-      <StatusBar
-        barStyle = "light-content"
-        backgroundColor="transparent"
-        translucent
-       />
       <Image 
         source={illustrationImg} 
           style={styles.image}
@@ -27,6 +22,7 @@ export function Index() {
             e organize suas {'\n'}
             jogatinas
         </Text>
+
         <Text style={styles.subtitle}>
           Crie grupos para jogar seus games {'\n'}
           favoritos com seus amigos
@@ -36,8 +32,8 @@ export function Index() {
           title = "Entrar com Discord"
           activeOpacity={0.7}
          />
+         
       </View>
-    
     </View>
   )
 }

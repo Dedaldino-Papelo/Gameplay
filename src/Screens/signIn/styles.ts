@@ -28,12 +28,14 @@ export const styles = StyleSheet.create({
         textAlign: "center",
         fontSize: 40,
         fontWeight: "bold",
-        marginBottom: 16
+        marginBottom: 16,
+        fontFamily: theme.fonts.title700
     },
     subtitle: {
         color: theme.colors.heading,
         textAlign: "center",
         fontSize: 15,
-        marginBottom: 38
+        marginBottom: 38,
+        fontFamily: theme.fonts.title500
     }
 })

@@ -17,6 +17,7 @@ export default function ButtonIcon({ title, ...rest }: props) {
         <View style={styles.iconWrapper}>
            <Image source={discordImg} style={styles.icon} />
         </View>
+        
         <Text style={styles.title}>
           {title}
         </Text>
