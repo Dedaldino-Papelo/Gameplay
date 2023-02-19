@@ -15,15 +15,18 @@ export const styles = StyleSheet.create({
         height: 56,
         width: 56,
         justifyContent: "center",
-       alignItems: "center"
+        alignItems: "center",
+        borderRightColor: theme.colors.line
     },
     icon: {
-
+        width: 24,
+        height: 18
     },
     title: {
         flex: 1,
         color: theme.colors.heading,
         fontSize: 15,
         textAlign: "center",
+        fontWeight: "bold"
     }
 })
