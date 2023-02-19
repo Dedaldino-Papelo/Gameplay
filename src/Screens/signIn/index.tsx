@@ -1,13 +1,42 @@
-import { View, Text, TextInput } from 'react-native'
+import { View, 
+        Text, 
+        TextInput,
+        Image, 
+        StatusBar} from 'react-native'
 import React from 'react'
 import { styles } from './styles'
-
+import illustrationImg from '../../assets/illustration.png'
+import ButtonIcon from '../../components/ButtonIcon'
 export function Index() {
   return (
     <View style={styles.container}>
-      <Text>Hello World, NLW Together</Text>
+      <StatusBar
+        barStyle = "light-content"
+        backgroundColor="transparent"
+        translucent
+       />
+      <Image 
+        source={illustrationImg} 
+          style={styles.image}
+          resizeMode="stretch"
+           />
+      
+      <View style={styles.content}>
+        <Text style={styles.title}>
+            Conecte-se {'\n'}
+            e organize suas {'\n'}
+            jogatinas
+        </Text>
+        <Text style={styles.subtitle}>
+          Crie grupos para jogar seus games {'\n'}
+          favoritos com seus amigos
+        </Text>
 
-      <TextInput style={styles.input} />
+        <ButtonIcon
+          title = "Entrar com Discord"
+         />
+      </View>
+    
     </View>
   )
 }
