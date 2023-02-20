@@ -1,12 +1,17 @@
 import {Text, View, StatusBar } from 'react-native';
-import { Index } from './src/Screens/signIn';
 import { useEffect } from 'react';
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import {Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
+import Background from './src/components/Background/Index';
+import { SignIn } from './src/Screens/signIn';
+import Home from './src/Screens/Home';
+import Routes from './src/routes';
+import { createStackNavigator } from '@react-navigation/stack';
 
-// Keep the splash screen visible while we fetch resources
+
+const Stack = createStackNavigator();
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
@@ -33,12 +38,12 @@ export default function App() {
 
   return (
     <>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
-      <Index />
-    </>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="transparent"
+          translucent
+        />
+        <Routes />
+      </>
   );
 }
