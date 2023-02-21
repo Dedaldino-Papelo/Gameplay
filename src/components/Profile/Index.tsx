@@ -12,7 +12,7 @@ export default function Profile() {
       <View>
         <View style={styles.user}>
             <Text style={styles.greetings}>Olá</Text>
-            <Text style={styles.username}>Rodrigo</Text>
+            <Text style={styles.username}>Dedaldino</Text>
         </View>
 
         <Text 
