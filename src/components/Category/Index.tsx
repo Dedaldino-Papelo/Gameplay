@@ -10,12 +10,14 @@ import { theme } from '../../global/theme';
 type props = RectButtonProps & {
     title: string;
     icon: React.FC<SvgProps>
+    hasCheckBox?: boolean
     checked?: boolean
 }
 
 export default function Category({
     title, 
     checked = false,
+    hasCheckBox= false,
     icon: 
     Icon, 
     ...rest
@@ -30,8 +32,10 @@ export default function Category({
             colors={[secondary50, secondary70]}
         >
             <View style={[styles.content, {opacity: checked ? 1 : 0.4 }]}>
-                <View style={
-                    checked ? styles.checked : styles.check } />
+
+                
+                {hasCheckBox && <View style={
+                    checked ? styles.checked : styles.check } />}
 
                 <Icon 
                     width={48}

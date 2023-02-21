@@ -9,7 +9,11 @@ import ListHeader from '../../components/ListHeader/Index'
 import Appointment from '../../components/Appointment'
 import { ListDivider } from '../../components/ListDivider'
 
-export default function Home() {
+type props = {
+  navigation: any
+}
+
+export default function Home({navigation}: props) {
   const [category, setCategory] = useState('')
 
   const Appointments = [
@@ -43,6 +47,10 @@ export default function Home() {
     category === categoryId ? setCategory(''): setCategory(categoryId)
   }
 
+  const handleAppointment = () => {
+    navigation.navigate("AppointmentDetails")
+  }
+
   return (
     <Background>
       <View>
@@ -68,7 +76,9 @@ export default function Home() {
             data={Appointments}
             keyExtractor={item => item.id} 
             renderItem={({item}) => (
-              <Appointment data={ item } />
+              <Appointment data={ item } 
+              onPress={handleAppointment}
+              />
           )}
           ItemSeparatorComponent = {() => <ListDivider />}
           style = {styles.matches}
