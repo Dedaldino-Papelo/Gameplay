@@ -6,6 +6,7 @@ import Home from '../Screens/Home';
 import { SignIn } from '../Screens/signIn';
 import Background from '../components/Background/Index';
 import AppointmentDetails from '../Screens/AppointmentDetails';
+import AppointmentCreate from '../Screens/AppointmentCreate';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ export default function AuthRoutes() {
         <Stack.Screen name="Signin" component={SignIn} />
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="AppointmentDetails" component={AppointmentDetails} />
+        <Stack.Screen name="AppointmentCreate" component={AppointmentCreate} />
   </Stack.Navigator>
 
   )

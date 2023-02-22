@@ -51,13 +51,17 @@ export default function Home({navigation}: props) {
     navigation.navigate("AppointmentDetails")
   }
 
+  const handleAppointmentCreate = () => {
+    navigation.navigate("AppointmentCreate")
+  }
+
   return (
     <Background>
       <View>
         
         <View style={styles.header}>
           <Profile />
-          <ButtonAdd />
+          <ButtonAdd onPress={handleAppointmentCreate} />
         </View>
 
         <CategorySelect
